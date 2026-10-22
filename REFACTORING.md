@@ -9,9 +9,10 @@ Before:
         return p + x
 
 After:
-    def calculate_total(subtotal):
-        gst_amount = subtotal * 0.05
-        return subtotal + gst_amount
+  
+def calculate(p):
+    gst_amount = p * 0.05
+    return p + gst_amount
 
 Improvement:
 Meaningful names make the code easier to understand.

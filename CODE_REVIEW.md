@@ -1,43 +1,46 @@
 
-# Code Review — Campus Canteen System
-## Reviewer
-Student Name: Your Name
+# Task 6 - Code Review
 
-## Code Review Comments
+## Code Reviewed
+File: classmate_order.py
 
-1. Variable Naming:
-   Use meaningful names instead of unclear
-   single-letter variables.
+Note: This is a sample file created for practice,
+not code supplied by an actual classmate.
 
-2. Code Duplication:
-   Move repeated calculations into reusable functions.
+## Six Code Review Comments
 
-3. Input Validation:
-   Validate negative amounts and invalid order counts.
+### 1. Unclear Function Names
+Functions c(), o(), d(), and pay() do not
+clearly describe their purpose.
+Suggestion: Use names such as calculate_total()
+and can_accept_order().
 
-4. Magic Numbers:
-   Use named constants for GST, discount,
-   and pickup-slot capacity.
+### 2. Duplicate Code
+Functions c() and d() repeat GST calculations.
+Suggestion: Create a reusable function for
+the shared calculation.
 
-5. Function Responsibility:
-   Keep bill calculation, order validation,
-   and payment processing separate.
+### 3. Magic Numbers
+Values 0.05, 300, 0.90, and 40 are hard-coded.
+Suggestion: Use named constants for GST,
+discount limits, discount rates, and slot capacity.
 
-6. Documentation:
-   Add docstrings explaining each function's purpose.
+### 4. Missing Input Validation
+Negative prices and invalid order counts are
+not checked.
+Suggestion: Validate inputs before processing.
+
+### 5. Unnecessary Conditional Logic
+Function o() uses if/else to return True or False.
+Suggestion: Return the comparison directly.
+
+### 6. Misleading Payment Function
+Function pay() always returns True without
+checking a payment result.
+Suggestion: Return the result from a payment
+gateway instead of claiming every payment succeeds.
 
 ## Review Summary
-The code should be readable, reusable,
-and easy to maintain.
-
-
-## Review Status
-
-The initial review checklist has been prepared.
-The final review comments must be verified against
-the actual code being reviewed.
-
-## Refactoring Verification
-
-The three refactoring examples will be checked
-to confirm that program behaviour remains unchanged.
+The sample code could be improved through
+clear naming, reusable functions, input validation,
+named constants, and reliable payment handling.
