@@ -29,3 +29,15 @@ Student Name: Your Name
 ## Review Summary
 The code should be readable, reusable,
 and easy to maintain.
+
+
+## Review Status
+
+The initial review checklist has been prepared.
+The final review comments must be verified against
+the actual code being reviewed.
+
+## Refactoring Verification
+
+The three refactoring examples will be checked
+to confirm that program behaviour remains unchanged.
